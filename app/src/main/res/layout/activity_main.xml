@@ -45,10 +45,10 @@
     <ImageView
         app:srcCompat="@drawable/suga2"
         android:id="@+id/imageView5"
-        android:scaleType="fitEnd"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/imageView4"
-        android:layout_height="520px"
-        android:layout_width="520px" />
+        android:layout_height="500px"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_alignParentStart="true"
+        android:cropToPadding="true"
+        android:layout_width="300px" />
 
 </RelativeLayout>
