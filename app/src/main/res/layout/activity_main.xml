@@ -36,10 +36,19 @@
     <ImageView
         app:srcCompat="@drawable/suga_bts"
         android:id="@+id/imageView4"
-        android:layout_width="500px"
         android:layout_height="500px"
+        android:layout_width="400px"
         android:layout_marginTop="307dp"
         android:layout_alignTop="@+id/calendarView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignEnd="@+id/calendarView" />
+
+    <ImageView
+        app:srcCompat="@drawable/suga2"
+        android:id="@+id/imageView5"
+        android:scaleType="fitEnd"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/imageView4"
+        android:layout_height="520px"
+        android:layout_width="520px" />
 
 </RelativeLayout>
