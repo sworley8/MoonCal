@@ -66,6 +66,6 @@
         android:id="@+id/json_button"
         style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
         android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/calendarView" />
+        android:layout_toEndOf="@+id/textClock" />
 
 </RelativeLayout>
