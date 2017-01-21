@@ -37,10 +37,11 @@
         app:srcCompat="@drawable/suga_bts"
         android:id="@+id/imageView4"
         android:scaleType="fitEnd"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/calendarView"
-        android:layout_toEndOf="@+id/textClock"
         android:layout_height="100dp"
-        android:layout_width="40dp" />
+        android:layout_width="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textClock"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="27dp" />
 
 </RelativeLayout>
