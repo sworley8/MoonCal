@@ -8,19 +8,22 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.sophi.myapplication.MainActivity">
+    tools:context="com.example.sophi.myapplication.MainActivity"
+    android:background="@drawable/fullmoon">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calendar" />
+        android:text="PhaseCal"
+        android:textColor="@color/colorAccent"/>
 
     <CalendarView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/calendarView"
         android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:unfocusedMonthDateColor="@color/colorAccent"/>
 
     <TextClock
         android:layout_width="wrap_content"
