@@ -37,10 +37,10 @@
         app:srcCompat="@drawable/suga_bts"
         android:id="@+id/imageView4"
         android:layout_height="500px"
-        android:layout_width="400px"
         android:layout_marginTop="307dp"
         android:layout_alignTop="@+id/calendarView"
-        android:layout_alignEnd="@+id/calendarView" />
+        android:layout_alignEnd="@+id/calendarView"
+        android:layout_width="350px" />
 
     <ImageView
         app:srcCompat="@drawable/suga2"
