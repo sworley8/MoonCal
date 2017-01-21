@@ -34,16 +34,13 @@
         android:layout_alignParentTop="true" />
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/suga1"
-        android:id="@+id/imageView3"
+        app:srcCompat="@drawable/suga_bts"
+        android:id="@+id/imageView4"
         android:scaleType="fitEnd"
-        android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        android:layout_marginTop="323dp"
-        android:layout_alignTop="@+id/calendarView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/calendarView"
         android:layout_toEndOf="@+id/textClock"
-        android:layout_marginStart="12dp" />
+        android:layout_height="100dp"
+        android:layout_width="40dp" />
 
 </RelativeLayout>
