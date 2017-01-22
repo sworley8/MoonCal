@@ -18,6 +18,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -43,15 +44,20 @@ public class MainActivity extends AppCompatActivity {
     class RetrieveFeedTask extends AsyncTask<Void, Void, String> {
 
         private Exception exception;
+        Calendar rightNow = Calendar.getInstance();
+        int month = rightNow.get(Calendar.MONTH);
+        int day = rightNow.get(Calendar.DAY_OF_MONTH);
+        int year = rightNow.get(Calendar.YEAR);
+
         private String APIurl =
-                "http://api.usno.navy.mil/moon/phase?date=5/3/2009&nump=48";
+                "http://api.usno.navy.mil/moon/phase?date=" + Integer.toString(month) + "/" + Integer.toString(day) + "/" + Integer.toString(year) + "&nump=48";
 
 
         protected String doInBackground(Void... urls) {
             // Do some validation here
 
             try {
-                java.net.URL url = new URL(APIurl /*"date"  "&nump=" + "&apiKey=" + API_KEY*/);
+                java.net.URL url = new URL(APIurl);
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 try {
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
@@ -80,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 response = "THERE WAS AN ERROR";
             }
 
-            Log.i("INFO", response);
+            /*Log.i("INFO", response);*/
             try {
                 JSONObject jObject = new JSONObject(response);
                 JSONArray jArray = jObject.getJSONArray("phasedata");
@@ -90,9 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     String date = oneObject.getString("date");
                     String time = oneObject.getString("time");
 
-                    Log.i("phase",phase);
-                        /*String jdate = jArray.get(i).getString(1);
-                         String jtime = jArray.get(i).getString(2);*/
+
                     }
 
                 Log.i("json", jArray.toString());
